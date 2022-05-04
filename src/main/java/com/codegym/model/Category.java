@@ -1,7 +1,11 @@
 package com.codegym.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
+
+
 
 @Entity
 @Table(name = "categories")
@@ -13,6 +17,7 @@ public class Category {
     private String description;
 
     @OneToMany(targetEntity = Book.class)
+    @JsonIgnore
     private List<Book> books;
 
     public Category() {

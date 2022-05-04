@@ -26,6 +26,12 @@ dependencies {
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
     implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.4.2'
     implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+
+    implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.4'
+
+    //web service
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.12.1'
 }
 
 test {

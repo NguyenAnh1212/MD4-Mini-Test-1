@@ -6,4 +6,5 @@ import com.codegym.service.IGeneralService;
 
 public interface IBookService extends IGeneralService<Book> {
     Iterable<Book> findAllByCategory(Category category);
+//    Iterable<Book> findAllByFirstNameContaining(String name);
 }

@@ -37,4 +37,9 @@ public class BookService implements IBookService{
     public Iterable<Book> findAllByCategory(Category category) {
         return bookRepository.findAllByCategory(category);
     }
+
+//    @Override
+//    public Iterable<Book> findAllByFirstNameContaining(String name) {
+//        return bookRepository.findAllByFirstNameContaining(name);
+//    }
 }

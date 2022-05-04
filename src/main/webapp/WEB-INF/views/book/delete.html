@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Book</title>
+</head>
+<body>
+<h1 style="color: darkorange" >Delete Book</h1>
+<h2>Are you sure?</h2>
+<p>
+    <a href="/book">Book List</a>
+</p>
+<form th:action="@{/remove}" th:object="${book}" method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td th:text="${book.name}"></td>
+        </tr>
+        <tr>
+            <th>Price:</th>
+            <td th:text="${book.price}"></td>
+        </tr>
+        <tr>
+            <th>Author:</th>
+            <td th:text="${book.author}"></td>
+        </tr>
+        <tr>
+            <th>Image:</th>
+            <td><img th:src="@{'/img/'+${book.image}}" width="100"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Delete"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
